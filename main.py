@@ -23,6 +23,7 @@ for item in data:
   cnt+=1
   if cnt==14:
     print("Waiting for 1.5 minutes...")
+    #this wait is because the google gemini LLM api plan that i am using has limit of 15 request per minute.
     time.sleep(90)
   prompt = """
     I have given you the json object whose schema explination is as follow :
